@@ -78,7 +78,6 @@ module.exports = {
                         metaData.module.test = results.test;
                         metaData.module.license = results.license;
                         templateDir = path.resolve(__dirname, '../.templates');
-                        console.log(metaData);
                         return [4, generator_1.default(metaData, templateDir, target)];
                     case 5:
                         _a.sent();
