@@ -4,12 +4,23 @@
   "description": "quickly create node npm package, within Typescript",
   "main": "scripts/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "precommit": "lint-staged"
+  },
+  "bin": {
+    "npm-create-node": "bin/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LucaPeng/npm-create-node.git"
   },
+  "files": [
+    "bin/",
+    "scripts/",
+    "index.d.ts",
+    "README.md"
+  ],
   "keywords": [
     "node",
     "npm",
@@ -24,10 +35,24 @@
   },
   "homepage": "https://github.com/LucaPeng/npm-create-node#readme",
   "dependencies": {
-    "typescript": "^2.8.3"
+    "@types/node": "8.9.1",
+    "chalk": "^2.4.1",
+    "ejs": "^2.5.9",
+    "inquirer": "^5.2.0",
+    "metalsmith": "^2.3.0",
+    "mkdirp": "^0.5.1",
+    "npmconf": "^2.1.2",
+    "rimraf": "^2.6.2",
+    "shelljs": "^0.8.1",
+    "typescript": "^2.8.3",
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
-    "@mfe/precommit-eslint": "1.0.9",
+    "@types/chalk": "^2.2.0",
+    "@types/inquirer": "^0.0.41",
+    "@types/mkdirp": "^0.5.2",
+    "@types/shelljs": "^0.7.9",
+    "@types/yargs": "^11.0.0",
     "babel-eslint": "8.2.1",
     "eslint": "4.17.0",
     "eslint-config-airbnb-base": "12.1.0",
@@ -35,6 +60,11 @@
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-node": "6.0.0",
     "eslint-plugin-typescript": "0.8.1",
-    "typescript-eslint-parser": "13.0.0"
+    "husky": "0.14.3",
+    "lint-staged": "6.1.0",
+    "typescript-eslint-parser": "^15.0.0"
+  },
+  "lint-staged": {
+    "src/*/*.{js,ts}": "eslint"
   }
 }
