@@ -33,7 +33,8 @@ if (!name) {
 
       created finished!
       exceed follow cmd within the project：
-      yarn install typescript
+      yarn add typescript
+      git init
       eslint-init --node --ts --husky // see <> for detail if you need eslint
       Then, Happy Coding~
 
