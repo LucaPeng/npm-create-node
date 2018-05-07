@@ -32,10 +32,10 @@ if (!name) {
       ************************      
 
       created finished!
-      exceed follow cmd within the project：
+      execute follow cmd within the project：
       yarn add typescript
       git init
-      eslint-init --node --ts --husky // see <> for detail if you need eslint
+      eslint-init --node --ts --husky // see <https://www.npmjs.com/package/eslint-init> for detail if you need eslint
       Then, Happy Coding~
 
       ************************
